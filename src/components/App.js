@@ -1,16 +1,16 @@
-import TimeboxesAPI from "../api/AxiosTimeboxesApi";
+import AxiosHttpApi from '../api/AxiosHttpApi';
 
-import React from "react";
+import React from 'react';
 
 class App extends React.Component {
     state = {
-        "timeboxes": [],
+        'data': [],
         error: null
     };
 
     componentDidMount() {
-        TimeboxesAPI.getAllTimeboxes().then(
-            (timeboxes) => this.setState({timeboxes})
+        AxiosHttpApi.getAllData().then(
+            (data) => this.setState({data})
         ).catch(
             (error) => this.setState({error})
         ).finally(
@@ -22,8 +22,8 @@ class App extends React.Component {
 
         return (
             <div>
-                By Patryk Zdral
-                <span>{JSON.stringify(this.state.timeboxes)}</span>
+                Test angular Page by Patryk Zdral
+                <span> Data fetched from server: {JSON.stringify(this.state.data)}</span>
                 <hr/>
                 <span>Has error: {JSON.stringify(this.state.error)}</span>
             </div>

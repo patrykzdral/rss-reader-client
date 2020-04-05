@@ -1,7 +1,7 @@
 // Constants.js
 const prod = {
     url: {
-        API_URL: 'RssReader-env.eba-pmaaqe4p.us-east-1.elasticbeanstalk.com'
+        API_URL: 'http://RssReader-env.eba-pmaaqe4p.us-east-1.elasticbeanstalk.com'
     }
 };
 
